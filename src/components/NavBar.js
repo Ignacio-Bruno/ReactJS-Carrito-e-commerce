@@ -11,7 +11,7 @@ const NavBar = () => {
             DropsBA
             </Navbar.Brand>
             <Nav className="">
-                <NavLink as={Link} to='/category/hombres'>Hombre</NavLink>
+                <NavLink as={Link} to='/category/hombre'>Hombre</NavLink>
                 <Nav.Link as={Link} to='/category/mujer'>Mujer</Nav.Link>
                 <Nav.Link as={Link} to='/category/unisex'>UniSex</Nav.Link>
             </Nav>

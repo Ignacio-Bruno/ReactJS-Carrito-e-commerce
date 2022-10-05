@@ -1,4 +1,5 @@
 .itemList{
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
 }
