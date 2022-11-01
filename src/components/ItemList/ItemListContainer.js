@@ -20,6 +20,7 @@ const ItemListContainer = ({greeting}) => {
             .catch((error) => console.warn(error))
         } 
     }, [categoryId])
+
     return (
         <Container>
             <p className="prods">PRODUCTOS</p>

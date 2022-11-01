@@ -8,6 +8,8 @@ export const ItemCount = ({initial, stock, onAdd}) => {
         setCount(count - 1);
     }
 
+    const handleClick = () => onAdd(count);
+
     const increase = () => {
         setCount(count + 1);
     }
@@ -19,11 +21,13 @@ export const ItemCount = ({initial, stock, onAdd}) => {
 
     return (
         <div className='counter'>
-            <button className='buttons' disabled={count <= 1} onClick={decrease}>-</button>
-            <span>{count}</span>
-            <button className='buttons' disabled={count >= stock} onClick={increase}>+</button>
             <div>
-                <button disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al Carrito</button>
+                <button className='buttons' disabled={count <= 1} onClick={decrease}>-</button>
+                <span>{count}</span>
+                <button className='buttons' disabled={count >= stock} onClick={increase}>+</button>
+            </div>
+            <div>
+                <button className='cart' disabled={stock <= 0} onClick={handleClick}>Agregar al Carrito</button>
             </div>
         </div>
     );
